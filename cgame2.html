@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="codepixer">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>'C' Snake Game</title>
+
+	<!--Google Font
+		============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500i" rel="stylesheet">
+
+<!--	CSS
+		============================================= -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css">
+	<link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/prog.css">
+
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>C Program</title>
+    <!-- add jquery file/link to your document -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145854853-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145854853-2');
+</script>
+
+</head>
+<body>
+
+	<!-- Start Header Area -->
+	<header id="header">
+		<div class="container">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+
+						<li class="menu-active"><a href="index.html">Home</a></li>
+						
+						<li class="menu-has-children"><a href="">BCA</a>
+							<ul>
+								<li><a href="semester1.html">BCA Sem 1st</a></li>
+								<li><a href="semester2.html">BCA Sem 2nd</a></li>
+								<li><a href="semester3.html">BCA Sem 3rd</a></li>
+								<li><a href="semester4.html">BCA Sem 4th</a></li>
+								<li><a href="semester5.html">BCA Sem 5th</a></li>
+								<li><a href="semester6.html">BCA Sem 6th</a></li>
+							</ul>
+						</li>
+
+						<li class="menu-has-children"><a href="">Programs</a>
+							<ul>
+								<li><a href="cprograms.html">'C' Programs</a></li>
+								<li><a href="#">Java Programs</a></li>
+							</ul>
+						</li>
+
+						<li><a href="#">Career</a></li>
+
+						<li><a href="about.html">About</a></li>
+
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav><!-- #nav-menu-container -->
+			</div>
+		</div>
+	</header>
+	<!-- End Header Area -->
+
+
+    
+	<!-- Start Banner Area -->
+	<section class="banner-area relative">
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">
+						'C' Snake Game
+					</h1>
+					<p>
+						We are giving the source code of the Snake game. This is simple snake game.
+					</p>
+					<div class="link-nav">
+						<span class="box">
+							<a href="index.html">Home </a>
+							<i class="lnr lnr-arrow-right"></i>
+							<a href="cprograms.html">'C' Programs</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="rocket-img">
+			<img src="img/rocket.png" alt="">
+		</div>
+	</section>
+	<!-- End Banner Area -->
+
+
+
+
+
+
+<!--  Start Program Area  -->
+<br> <br> <br>
+
+<section>
+		<div class="feature-inner row">
+				<div class="col-lg-20 col-md-6">
+					<div class="feature-item">
+						<h2><i class="ti-game"></i> Snake Game :-</h2>
+						<div class="wow fadeIn" data-wow-duration="3s" data-wow-delay=".1s">
+
+       <textarea rows="10" cols="50" id="1">
+#include<stdio.h>
+#include<dos.h>
+#include<ctype.h>
+#include<string.h>
+#include<conio.h>
+#include<stdlib.h>
+#define TOP 1
+#define DOWN 2
+#define LEFT 3
+#define RIGHT 4
+void score(int s=1)
+{
+    static unsigned long sc=0;
+    window(70,22,78,23);
+    if(s)
+    {
+        sc=sc+100;
+        cprintf("      ");
+        window(70,22,78,23);
+        cprintf("%ld",sc);
+    }
+    else
+        sc=0;
+}
+void status(char *s,int c=WHITE)
+{
+    window(70,23,78,25);
+    textcolor(c);
+    cprintf("%s",s);
+    for(int x=strlen(s);x<7;x++)
+    cprintf(" ");
+    textcolor(WHITE);
+}
+void main()
+{
+    clrscr();
+    _setcursortype(_NOCURSOR);
+    textcolor(WHITE);
+    cprintf("\n   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿  ");
+    for(int i=0;i<17;i++)
+    cprintf("   ³                                                                         ³  ");
+    cprintf("   ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ  ");
+    cprintf("   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿   Press 'x' to Exit            ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿  ");
+    cprintf("   ³  S N A K E  G A M E  ³   Press 'p' to Pause and Play  ³ SCORE : 0       ³  ");
+    cprintf("   ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ                                ³ STATUS: Playing ³  ");
+    cprintf("                                                           ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ  ");
+    int snkx[20],snky[20],d=LEFT,p=0,sz=6,restart=1;
+    while(1)
+    {
+        if(restart)
+        {
+            for(i=0;i<6;i++)
+            snkx[i]=30+i*2;
+            for(i=6;i<20;i++)
+            snkx[i]=0;
+            for(i=0;i<20;i++)
+            snky[i]=9;
+            sz=6;
+            p=0;
+            d=LEFT;
+            restart=0;
+            score();
+            window(6,3,76,19);
+            for(i=0;i<610;i++)
+            cprintf("  ");
+        }
+        int x,y;
+        if(p!=1)
+        {
+            randomize();
+            do{
+                        x=random(70)+6;
+                    }while(x%2==1);
+                    y=random(16)+3;
+            p=1;
+            window(x,y,x+1,y+1);
+            textcolor(LIGHTGREEN);
+            cprintf("%c",1);
+            textcolor(WHITE);
+        }
+        while(!kbhit())
+        {
+            status("Playing",LIGHTGREEN);
+            window(snkx[sz-1],snky[sz-1],snkx[sz-1]+2,snky[sz-1]+2);
+            cprintf(" ");
+            for(i=0;i<sz-1;i++)
+            {
+                window(snkx[i],snky[i],snkx[i]+1,snky[i]+1);
+                cprintf("");
+            }
+            for(i=sz-1;i>=1;i--)
+            {
+                snkx[i]=snkx[i-1];
+                snky[i]=snky[i-1];
+            }
+            switch(d)
+            {
+                case RIGHT : snkx[0]+=2; break;
+                case LEFT  : snkx[0]-=2; break;
+                case TOP   : snky[0]-=1; break;
+                case DOWN  : snky[0]+=1;
+            }
+            delay(200);
+            if(x==snkx[0] && y==snky[0])
+            {
+                int f=0;
+                do{
+                    do{
+                        x=random(70)+6;
+                    }while(x%2==1);
+                    y=random(16)+3;
+                    for(i=0;i<sz;i++)
+                        if(snkx[i]==x && snky[i]==y)
+                            f=1;
+                }while(f);
+                p=1;
+                window(x,y,x+1,y+1);
+                textcolor(LIGHTGREEN);
+                cprintf("%c",1);
+                textcolor(WHITE);
+ 
+                score();
+                sz++;
+ 
+                switch(d)
+                {
+                    case RIGHT : snkx[sz-1]+=2;
+                                 snky[sz-1]=snky[sz-2];
+                                 break;
+                    case LEFT  : snkx[sz-1]-=2;
+                                 snky[sz-1]=snky[sz-2];
+                                 break;
+                    case TOP   : snky[sz-1]-=1;
+                                 snkx[sz-1]=snkx[sz-2];
+                                 break;
+                    case DOWN  : snky[sz-1]+=1;
+                                 snkx[sz-1]=snkx[sz-2];
+                }
+            }
+            int sflag=0;
+            for(i=0;i<sz-1;i++)
+                if(snkx[sz-1]==snkx[i] && snky[sz-1]==snky[i])
+                {
+                    sflag=1;
+                    break;
+                }
+            if(snkx[0]<5 || snkx[0]>76 || snky[0]<3 || snky[0]>19)
+                sflag=1;
+            if(sflag)
+            {
+                textcolor(LIGHTRED);
+                for(i=1;i<sz;i++)
+                {
+                    window(snkx[i],snky[i],snkx[i]+1,snky[i]+1);
+                    cprintf("");
+                }
+                status("Stoped",LIGHTRED);
+                score(0);
+                restart=1;
+                break;
+            }
+        }
+        char ch=getch();
+        switch(tolower(ch))
+        {
+            case 'x' : return;
+            case 'p' :
+                        status("Paused");
+                        getch();
+                        break;
+            case 0 : {
+                        char chh=getch();
+                        switch(chh)
+                        {
+                            case 72 :{
+                                    if(d==LEFT || d== RIGHT)
+                                    d=TOP;
+                                    } break;
+                            case 80 :{
+                                    if(d==LEFT || d== RIGHT)
+                                    d=DOWN;
+                                    } break;
+                            case 75 :{
+                                    if(d==TOP || d==DOWN)
+                                    d=LEFT;
+                                    } break;
+                            case 77 :{
+                                    if(d==TOP || d==DOWN)
+                                    d=RIGHT;
+                                    }
+                        }
+                    } break;
+        }
+    }
+}   
+       
+       </texhtarea>
+    </br>
+    <button onclick="myFunction1()" class="genric-btn success radius">Copy Program</button>
+			<script type="text/javascript">
+            function myFunction1() {
+            	var copyTxt = document.getElementById("1");
+            	copyTxt.select();
+            	document.execCommand("copy");
+            }
+			</script>
+
+				</div>
+			</div>
+		</div> </section>
+
+
+<br>
+<div class="button-group-area mt-40">
+<a href="cprograms.html" class="genric-btn danger circle arrow"><span class="lnr lnr-arrow-left"></span>Previous</a>
+<a href="c2.html" class="genric-btn danger circle arrow">Next<span class="lnr lnr-arrow-right"></span></a>
+</div>
+<br> <br>
+<!--  End Program Area  -->
+
+
+
+
+
+
+    <!-- Start Footer Area -->
+    <footer class="footer-area section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Top Products</h4>
+                    <ul>
+                        <li><a rel="nofollow" href="http://scholarship.up.nic.in/">Scholarship</a></li>
+                        <li><a rel="nofollow" href="https://www.youtube.com/channel/UC8l0Dfy2YekfiigaXEtbAow">Youtube Videos</a></li>
+                        <li><a rel="nofollow" href="https://www.resume.com">Create Resume</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a rel="nofollow" href="http://162.144.100.123/~ccsuresu/regpvt2013.php">All CCS Results</a></li>
+                        <li><a rel="nofollow" href="https://www.ccsuniversity.ac.in/web/Syllabus2/BCA.pdf">BCA Syllabus (CCS)</a></li>
+                        <li><a rel="nofollow" href="https://www.ccsuniversity.ac.in/">CCS Official Website</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Legal Info.</h4>
+                    <ul>
+                        <li><a href="contact.html">24/7 Support</a></li>
+                        <li><a rel="nofollow" href="https://dreamstudyds.blogspot.com/p/blog-page.html">Privacy Policy</a></li>
+                        <li><a rel="nofollow" href="https://dreamstudyds.blogspot.com/p/terms-and-conditions-these-terms-and.html">Terms and conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Apply Jobs</h4>
+                    <ul>
+                        <li><a rel="nofollow" href="https://www.sarkariresult.com/">Govt. Jobs</a></li>
+                        <li><a rel="nofollow" href="https://www.naukri.com/">Naukri.com</a></li>
+                        <li><a rel="nofollow" href="https://www.indeed.co.in/">Indeed</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 single-footer-widget">
+                    <h4>Newsmail</h4>
+                    <p>You can trust us. We are here to help you.</p>
+                    <div class="form-wrap" id="mc_embed_signup">
+                        <form target="_blank" action="https://dreamstudy.us3.list-manage.com/subscribe/post?u=cd22f420ea7426d545c374497&amp;id=adddc99f71"
+                         method="get" class="form-inline">
+                            <input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
+                             required="" type="email">
+                            <button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+                            <div style="position: absolute; left: -5000px;">
+                                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                            </div>
+
+                            <div class="info"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom row align-items-center">
+                <p class="footer-text m-0 col-lg-8 col-md-12"><!--Website is licensed under CC BY 3.0. -->
+                    <a rel="nofollow" href="https://dreamstudyds.blogspot.com/p/terms-and-conditions-these-terms-and.html">Terms and conditions</a> |
+                    <a rel="nofollow" href="https://dreamstudyds.blogspot.com/p/blog-page.html">Privacy Policy</a> |
+                    This website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.instagram.com/mayank4rana" target="_blank">Mayank Rana</a>
+                    <!--Website is licensed under CC BY 3.0. --></p>
+                <div class="col-lg-4 col-md-12 footer-social">
+                    <a href="https://www.fb.com/dreamstudy"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/allbcaweb"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.twitter.com/allbcaweb"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UC8l0Dfy2YekfiigaXEtbAow"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Area -->
+
+	<!-- ####################### Start Scroll to Top Area ####################### -->
+	<div id="back-top">
+		<a title="Go to Top" href="#"></a>
+	</div>
+	<!-- ####################### End Scroll to Top Area ####################### -->
+
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/easing.min.js"></script>
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

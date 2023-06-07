@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="codepixer">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>'C' Interchange num.(Call by Value)</title>
+
+	<!--Google Font
+		============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500i" rel="stylesheet">
+
+<!--	CSS
+		============================================= -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css">
+	<link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/prog.css">
+
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>C Program</title>
+    <!-- add jquery file/link to your document -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145854853-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145854853-2');
+</script>
+
+</head>
+<body>
+
+	<!-- Start Header Area -->
+	<header id="header">
+		<div class="container">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+
+						<li class="menu-active"><a href="index.html">Home</a></li>
+						
+						<li class="menu-has-children"><a href="">BCA</a>
+							<ul>
+								<li><a href="semester1.html">BCA Sem 1st</a></li>
+								<li><a href="semester2.html">BCA Sem 2nd</a></li>
+								<li><a href="semester3.html">BCA Sem 3rd</a></li>
+								<li><a href="semester4.html">BCA Sem 4th</a></li>
+								<li><a href="semester5.html">BCA Sem 5th</a></li>
+								<li><a href="semester6.html">BCA Sem 6th</a></li>
+							</ul>
+						</li>
+
+						<li class="menu-has-children"><a href="">Programs</a>
+							<ul>
+								<li><a href="cprograms.html">'C' Programs</a></li>
+								<li><a href="c++programs.html">C++ Programs</a></li>
+								<li><a href="javaprograms.html">Java Programs</a></li>
+							</ul>
+						</li>
+
+						<li><a href="career.html">Career</a></li>
+
+						<li><a href="about.html">About</a></li>
+
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav><!-- #nav-menu-container -->
+			</div>
+		</div>
+	</header>
+	<!-- End Header Area -->
+
+
+    
+	<!-- Start Banner Area -->
+	<section class="banner-area relative">
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">
+						'C' Program 20
+					</h1>
+					<p>
+						This C program is to swap two numbers using call by value.The call by value method of passing arguments to a function copies the actual value of an argument into the formal parameter of the function. In this case, changes made to the parameter inside the function have no effect on the argument.In C programming, C by default uses call by value to pass arguments.
+					</p>
+					<div class="link-nav">
+						<span class="box">
+							<a href="index.html">Home </a>
+							<i class="lnr lnr-arrow-right"></i>
+							<a href="cprograms.html">'C' Programs</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="rocket-img">
+			<img src="img/rocket.png" alt="">
+		</div>
+	</section>
+	<!-- End Banner Area -->
+
+
+
+
+
+
+<!--  Start Program Area  -->
+<br> <br> <br>
+
+<section>
+<h2><i class="ti-light-bulb"></i> Write a program to interchange number using function(by call by value method) :-</h2>
+<pre><code>
+//Interchange number using call by value
+
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void interchange(int x,int y);
+void main()
+
+{
+int a,b;
+printf("Enter any two numbers:");
+scanf("%d%d",&a,&b);
+
+interchange(a,b);
+printf("\n Value of A and B after interchange:\n a=%d\n b=%d",a,b);
+
+getch();
+}
+
+void interchange(int x,int y)
+{
+
+printf("Value of X and Y before interchange:\n x=%d\n y=%d",x,y);
+
+int temp;
+temp=x;
+x=y;
+y=temp;
+
+printf("\n Value of x and y after interchange:\n x=%d\n y=%d",x,y);
+}
+</code></pre>
+
+<h4>Output:</h4>
+<pre><code>
+Enter any two numbers:50
+100
+Value of X and Y before interchange:
+x=50
+y=100
+Value of x and y after interchange:
+x=100
+y=50
+Value of A and B after interchange:
+a=50
+b=100
+</code></pre>
+		
+    <pre><button onclick="myFunction8()" class="genric-btn success radius">Copy Program</button>
+			<script type="text/javascript">
+            function myFunction8() {
+            	var copyTxt = document.getElementById("8");
+            	copyTxt.select();
+            	document.execCommand("copy");
+            }
+			</script></pre>
+			<textarea rows="1" cols="1" id="8">
+       	//Interchange number using call by value
+
+		#include<stdio.h>
+		#include<conio.h>
+		void interchange(int x,int y);
+		void main()
+
+		{
+			int a,b;
+		printf("Enter any two numbers:");
+		scanf("%d%d",&a,&b);
+
+			interchange(a,b);
+printf("\n Value of A and B after interchange:\n a=%d\n b=%d",a,b);
+				getch();
+				 }
+
+		void interchange(int x,int y)
+		{
+printf("Value of X and Y before interchange:\n x=%d\n y=%d",x,y);
+
+			int temp;
+			temp=x;
+			x=y;
+			y=temp;
+
+printf("\n Value of x and y after interchange:\n x=%d\n y=%d",x,y);
+		}
+       	</textarea>
+		</section>
+
+
+<div class="button-group-area mt-40">
+<a href="c19.html" class="genric-btn danger circle arrow"><span class="lnr lnr-arrow-left"></span>Previous</a>
+<a href="c21.html" class="genric-btn danger circle arrow">Next<span class="lnr lnr-arrow-right"></span></a>
+</div>
+<br> <br><br><br>
+
+
+
+
+
+
+
+
+<br> <br> <br>
+<section>
+<h2><i class="ti-light-bulb"></i> C program to swap two numbers using call by value :-</h2>
+<pre><code>
+	//C program to swap two numbers using call by value
+
+		#include&lt;stdio.h&gt;
+		void swap(int,int);        
+		void main( )
+	
+	 {
+    	int n1,n2;
+    printf("Enter the two numbers to be swapped\n");
+    scanf("%d%d",&n1,&n2);
+
+printf("\nThe values of n1 and n2 in the main function before calling the swap function are n1=%d n2=%d",n1,n2);
+
+    swap(n1,n2);
+
+printf("\nThe values of n1 and n2 in the main function after calling the swap function are n1=%d n2=%d",n1,n2);}
+ 
+	void swap(int n1,int n2)                           
+	{ 
+    	int temp;
+    	temp=n1;
+    	n1=n2;
+    	n2=temp;
+printf("\nThe values of n1 and n2 in the swap function after swapping are n1=%d n2=%d",n1,n2);
+	 }
+</code></pre>
+
+<h4>Output:</h4>
+<pre><code>
+	Enter the two numbers to be swapped
+	200
+	824
+
+	The values of n1 and n2 in the main function before calling the swap function are n1=200 n2=824
+	The values of n1 and n2 in the swap function after swapping are n1=824 n2=200
+	The values of n1 and n2 in the main function after calling the swap function are n1=200 n2=824
+</code></pre>
+		
+    <pre><button onclick="myFunction2()" class="genric-btn success radius">Copy Program</button>
+			<script type="text/javascript">
+            function myFunction2() {
+            	var copyTxt = document.getElementById("2");
+            	copyTxt.select();
+            	document.execCommand("copy");
+            }
+			</script></pre>
+			<textarea rows="1" cols="1" id="2">
+      //C program to swap two numbers using call by value
+
+	#include<stdio.h>
+	void swap(int,int);        
+	void main( )
+	
+	{
+    int n1,n2;
+    printf("Enter the two numbers to be swapped\n");
+    scanf("%d%d",&n1,&n2);
+
+    printf("\nThe values of n1 and n2 in the main function before calling the swap function are n1=%d n2=%d",n1,n2);
+    swap(n1,n2);                                          
+    printf("\nThe values of n1 and n2 in the main function after calling the swap function are n1=%d n2=%d",n1,n2);}
+ 
+	void swap(int n1,int n2)                           
+	{ 
+    	int temp;
+    	temp=n1;
+    	n1=n2;
+    	n2=temp;
+    	printf("\nThe values of n1 and n2 in the swap function after swapping are n1=%d n2=%d",n1,n2);
+	 }
+       	</textarea>
+		</section><br>
+
+		<section><i class="ti-medall-alt"></i><h3> LOGIC:-</h3>
+		<br><strong>We are using a function called swap().This function basically swaps two numbers, how we normally take a temporary variable in C to swap 2 nos.</strong></section>
+
+		
+		<section>
+			<div class="section-top-border">
+				<h3 class="mb-10"><i class="ti-pencil-alt"></i> Dry Run of the Program:-</h3>
+				<div class="row">
+					<div class="col-lg-12">
+						<blockquote class="generic-blockquote">
+							Take 2 nos as input.Let us take n1=7 and n2=10.
+						<br>The values before calling the swap function will be n1=7 and n2=10.
+						<br>swap(n1,n2) i.e swap(7,10).
+						<br>Now we enter the swap function
+						<br>temp = n1  i.e. temp = 7
+						<br>n1 = n2 i.e. n1 = 10
+						<br>n2 = temp i.e. n2 = 7
+						<br>So the values printed inside the swap function would be n1 = 10 and n2 = 7
+						<br>But as the values are not passed by value they will not change inside the main.
+						<br>Hence after calling the swap function, you can see that the values n1 and n2 inside the main remain unchanged.
+						</blockquote>
+		 </section>
+
+
+<br>
+<div class="button-group-area mt-40">
+<a href="c19.html" class="genric-btn danger circle arrow"><span class="lnr lnr-arrow-left"></span>Previous</a>
+<a href="c21.html" class="genric-btn danger circle arrow">Next<span class="lnr lnr-arrow-right"></span></a>
+</div>
+<br> <br>
+<!--  End Program Area  -->
+
+
+
+
+
+
+	<!-- Start Footer Area -->
+	<footer class="footer-area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Top Products</h4>
+					<ul>
+						<li><a rel="nofollow" href="http://scholarship.up.nic.in/">Scholarship</a></li>
+						<li><a rel="nofollow" href="https://www.youtube.com/channel/UC8l0Dfy2YekfiigaXEtbAow">Youtube Videos</a></li>
+						<li><a rel="nofollow" href="https://www.resume.com">Create Resume</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a rel="nofollow" href="http://162.144.100.123/~ccsuresu/regpvt2013.php">All CCS Results</a></li>
+						<li><a rel="nofollow" href="https://www.ccsuniversity.ac.in/web/Syllabus2/BCA.pdf">BCA Syllabus (CCS)</a></li>
+						<li><a rel="nofollow" href="https://www.ccsuniversity.ac.in/">CCS Official Website</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Legal Info.</h4>
+					<ul>
+						<li><a href="contact.html">24/7 Support</a></li>
+						<li><a rel="nofollow" href="https://dreamstudyds.blogspot.com/p/blog-page.html">Privacy Policy</a></li>
+						<li><a rel="nofollow" href="https://dreamstudyds.blogspot.com/p/terms-and-conditions-these-terms-and.html">Terms and conditions</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Apply Jobs</h4>
+					<ul>
+						<li><a rel="nofollow" href="https://www.sarkariresult.com/">Govt. Jobs</a></li>
+						<li><a rel="nofollow" href="https://www.naukri.com/">Naukri.com</a></li>
+						<li><a rel="nofollow" href="https://www.indeed.co.in/">Indeed</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-4 col-md-6 single-footer-widget">
+					<h4>Newsmail</h4>
+					<p>You can trust us. We are here to help you.</p>
+					<div class="form-wrap" id="mc_embed_signup">
+						<form target="_blank" action="https://dreamstudy.us3.list-manage.com/subscribe/post?u=cd22f420ea7426d545c374497&amp;id=adddc99f71"
+						 method="get" class="form-inline">
+							<input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
+							 required="" type="email">
+							<button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+							<div style="position: absolute; left: -5000px;">
+								<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+							</div>
+
+							<div class="info"></div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom row align-items-center">
+				<p class="footer-text m-0 col-lg-8 col-md-12"><!--Website is licensed under CC BY 3.0. -->
+					<a rel="nofollow" href="https://dreamstudyds.blogspot.com/p/terms-and-conditions-these-terms-and.html">Terms and conditions</a> |
+					<a rel="nofollow" href="https://dreamstudyds.blogspot.com/p/blog-page.html">Privacy Policy</a> |
+					This website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.instagram.com/mayank4rana" target="_blank">Mayank Rana</a>
+					<!--Website is licensed under CC BY 3.0. --></p>
+				<div class="col-lg-4 col-md-12 footer-social">
+					<a href="https://www.fb.com/dreamstudy"><i class="fa fa-facebook"></i></a>
+					<a href="https://www.instagram.com/allbcaweb"><i class="fa fa-instagram"></i></a>
+					<a href="https://www.twitter.com/allbcaweb"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.youtube.com/channel/UC8l0Dfy2YekfiigaXEtbAow"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer Area -->
+
+	<!-- ####################### Start Scroll to Top Area ####################### -->
+	<div id="back-top">
+		<a title="Go to Top" href="#"></a>
+	</div>
+	<!-- ####################### End Scroll to Top Area ####################### -->
+
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/easing.min.js"></script>
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

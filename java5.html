@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="codepixer">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Prime Number Java Program</title>
+
+	<!--Google Font
+		============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500i" rel="stylesheet">
+
+<!--	CSS
+		============================================= -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css">
+	<link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/prog.css">
+
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prime Number Java Program</title>
+    <!-- add jquery file/link to your document -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145854853-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145854853-2');
+</script>
+
+</head>
+<body>
+
+	<!-- Start Header Area -->
+	<header id="header">
+		<div class="container">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+
+						<li class="menu-active"><a href="index.html">Home</a></li>
+						
+						<li class="menu-has-children"><a href="">BCA</a>
+							<ul>
+								<li><a href="semester1.html">BCA Sem 1st</a></li>
+								<li><a href="semester2.html">BCA Sem 2nd</a></li>
+								<li><a href="semester3.html">BCA Sem 3rd</a></li>
+								<li><a href="semester4.html">BCA Sem 4th</a></li>
+								<li><a href="semester5.html">BCA Sem 5th</a></li>
+								<li><a href="semester6.html">BCA Sem 6th</a></li>
+							</ul>
+						</li>
+
+						<li class="menu-has-children"><a href="">Programs</a>
+							<ul>
+								<li><a href="cprograms.html">'C' Programs</a></li>
+								<li><a href="c++programs.html">C++ Programs</a></li>
+								<li><a href="javaprograms.html">Java Programs</a></li>
+							</ul>
+						</li>
+
+						<li><a href="career.html">Career</a></li>
+
+						<li><a href="about.html">About</a></li>
+
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav><!-- #nav-menu-container -->
+			</div>
+		</div>
+	</header>
+	<!-- End Header Area -->
+
+
+    
+	<!-- Start Banner Area -->
+	<section class="banner-area relative">
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">
+						JAVA Program 5
+					</h1>
+					<p>
+						Prime number in Java: Prime number is a number that is greater than 1 and divided by 1 or itself only. In other words, prime numbers can't be divided by other numbers than itself or 1. For example 2, 3, 5, 7, 11, 13, 17.... are the prime numbers.
+					</p>
+					<div class="link-nav">
+						<span class="box">
+							<a href="index.html">Home </a>
+							<i class="lnr lnr-arrow-right"></i>
+							<a href="javaprograms.html">JAVA Programs</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="rocket-img">
+			<img src="img/rocket.png" alt="">
+		</div>
+	</section>
+	<!-- End Banner Area -->
+
+
+
+
+
+
+<!--  Start Program Area  -->
+<br> <br> <br>
+
+<section>
+<h2><i class="ti-light-bulb"></i> Prime Number Program in Java :-</h2>
+<pre><code>
+
+public class PrimeNumber{    
+public static void main(String args[]){    
+int i,m=0,flag=0;      
+int n=3;//it is the number to be checked    
+m=n/2;      
+if(n==0||n==1){  
+System.out.println(n+" is not prime number");      
+}else{  
+for(i=2;i<=m;i++){      
+if(n%i==0){      
+System.out.println(n+" is not prime number");      
+flag=1;      
+break;      
+}      
+}      
+if(flag==0) 
+{ System.out.println(n+" is prime number"); }  
+}//end of else  
+}    
+}   
+</code></pre>
+
+<h4>Output:</h4>
+<pre><code>
+3 is prime number
+</code></pre>
+		
+    <pre><button onclick="myFunction1()" class="genric-btn success radius">Copy Program</button>
+			<script type="text/javascript">
+            function myFunction1() {
+            	var copyTxt = document.getElementById("1");
+            	copyTxt.select();
+            	document.execCommand("copy");
+            }
+			</script></pre>
+			<textarea rows="1" cols="1" id="1">
+//Prime Number Program in Java
+
+public class PrimeNumber{    
+public static void main(String args[]){    
+int i,m=0,flag=0;      
+int n=3;//it is the number to be checked    
+m=n/2;      
+if(n==0||n==1){  
+System.out.println(n+" is not prime number");      
+}else{  
+for(i=2;i<=m;i++){      
+if(n%i==0){      
+System.out.println(n+" is not prime number");      
+flag=1;      
+break;      
+}      
+}      
+if(flag==0) 
+{ System.out.println(n+" is prime number"); }  
+}//end of else  
+}    
+}   
+       	</textarea>
+		</section>
+
+
+<br>
+<div class="button-group-area mt-40">
+<a href="java4.html" class="genric-btn danger circle arrow"><span class="lnr lnr-arrow-left"></span>Previous</a>
+<a href="java6.html" class="genric-btn danger circle arrow">Next<span class="lnr lnr-arrow-right"></span></a>
+</div>
+<br> <br>
+<!--  End Program Area  -->
+
+
+
+
+
+
+	<!-- Start Footer Area -->
+	<footer class="footer-area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Top Products</h4>
+					<ul>
+						<li><a rel="nofollow" href="http://scholarship.up.nic.in/">Scholarship</a></li>
+						<li><a rel="nofollow" href="https://www.youtube.com/channel/UC8l0Dfy2YekfiigaXEtbAow">Youtube Videos</a></li>
+						<li><a rel="nofollow" href="https://www.resume.com">Create Resume</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a rel="nofollow" href="http://162.144.100.123/~ccsuresu/regpvt2013.php">All CCS Results</a></li>
+						<li><a rel="nofollow" href="https://www.ccsuniversity.ac.in/web/Syllabus2/BCA.pdf">BCA Syllabus (CCS)</a></li>
+						<li><a rel="nofollow" href="https://www.ccsuniversity.ac.in/">CCS Official Website</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Legal Info.</h4>
+					<ul>
+						<li><a href="contact.html">24/7 Support</a></li>
+						<li><a rel="nofollow" href="https://dreamstudyds.blogspot.com/p/blog-page.html">Privacy Policy</a></li>
+						<li><a rel="nofollow" href="https://dreamstudyds.blogspot.com/p/terms-and-conditions-these-terms-and.html">Terms and conditions</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Apply Jobs</h4>
+					<ul>
+						<li><a rel="nofollow" href="https://www.sarkariresult.com/">Govt. Jobs</a></li>
+						<li><a rel="nofollow" href="https://www.naukri.com/">Naukri.com</a></li>
+						<li><a rel="nofollow" href="https://www.indeed.co.in/">Indeed</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-4 col-md-6 single-footer-widget">
+					<h4>Newsmail</h4>
+					<p>You can trust us. We are here to help you.</p>
+					<div class="form-wrap" id="mc_embed_signup">
+						<form target="_blank" action="https://dreamstudy.us3.list-manage.com/subscribe/post?u=cd22f420ea7426d545c374497&amp;id=adddc99f71"
+						 method="get" class="form-inline">
+							<input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
+							 required="" type="email">
+							<button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+							<div style="position: absolute; left: -5000px;">
+								<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+							</div>
+
+							<div class="info"></div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom row align-items-center">
+				<p class="footer-text m-0 col-lg-8 col-md-12"><!--Website is licensed under CC BY 3.0. -->
+					<a rel="nofollow" href="https://dreamstudyds.blogspot.com/p/terms-and-conditions-these-terms-and.html">Terms and conditions</a> |
+					<a rel="nofollow" href="https://dreamstudyds.blogspot.com/p/blog-page.html">Privacy Policy</a> |
+					This website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.instagram.com/mayank4rana" target="_blank">Mayank Rana</a>
+					<!--Website is licensed under CC BY 3.0. --></p>
+				<div class="col-lg-4 col-md-12 footer-social">
+					<a href="https://www.fb.com/dreamstudy"><i class="fa fa-facebook"></i></a>
+					<a href="https://www.instagram.com/allbcaweb"><i class="fa fa-instagram"></i></a>
+					<a href="https://www.twitter.com/allbcaweb"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.youtube.com/channel/UC8l0Dfy2YekfiigaXEtbAow"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer Area -->
+
+	<!-- ####################### Start Scroll to Top Area ####################### -->
+	<div id="back-top">
+		<a title="Go to Top" href="#"></a>
+	</div>
+	<!-- ####################### End Scroll to Top Area ####################### -->
+
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/easing.min.js"></script>
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
